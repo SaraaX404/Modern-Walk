@@ -1,10 +1,19 @@
-import React from 'react'
+import React from 'react';
+import  {Route, Routes, BrowserRouter as Router} from 'react-router-dom'
+import Home from './Pages/Home'
+import Header from './Components/Header'
+
+function App() {
+    return (
+        <Router>
+            <Header/>
+                <Routes>
+                    <Route path={'/'} element={<Home/>} />
+                </Routes>
+        </Router>
 
 
-export default ()=>{
-  return(
-      <div>
-        <h1>App is working fine</h1>
-      </div>
-  )
+    );
 }
+
+export default App
