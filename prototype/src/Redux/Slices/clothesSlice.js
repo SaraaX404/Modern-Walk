@@ -34,9 +34,11 @@ const clothesSlice = createSlice({
 
             console.log(action.payload)
             state.clothes = action.payload
+            state.loading = false
         },
         [getClothes.rejected]: (state, action) => {
             state.error = action.payload.message;
+            state.loading = false
         },
 
     },

@@ -24,6 +24,7 @@ const useStyles = makeStyles(() => ({
         height: 140,
         width: 100,
         margin: '0 auto',
+        marginBottom: '15px'
     },
     content: {
         margin: '0',
@@ -40,7 +41,7 @@ const useStyles = makeStyles(() => ({
         borderRadius: 30,
     },
 }));
-
+//reusable component for display cloths
 export default function ProductCard(props) {
     const classes = useStyles();
 
@@ -62,7 +63,7 @@ export default function ProductCard(props) {
                         color="text.secondary"
                         className={classes.description}
                     >
-                        {description.length > 70 ? `${description.slice(0, 90)}...` : description}
+                        {description.length > 60 ? `${description.slice(0, 60)}...` : description}
                     </Typography>
                 </CardContent>
             </CardActionArea>
