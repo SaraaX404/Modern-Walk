@@ -2,7 +2,7 @@
 
 ### `git clone https://github.com/SaraaX404/Modern-Walk.git`
 
-### `cd protoype`
+### `cd prototype`
 
 ### `npm install`
 
