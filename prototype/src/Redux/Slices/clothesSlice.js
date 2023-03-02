@@ -28,11 +28,8 @@ const clothesSlice = createSlice({
     extraReducers: {
         [getClothes.pending]: (state, action) => {
             state.loading = true;
-
         },
         [getClothes.fulfilled]: (state, action) => {
-
-            console.log(action.payload)
             state.clothes = action.payload
             state.loading = false
         },

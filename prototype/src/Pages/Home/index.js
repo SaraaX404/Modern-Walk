@@ -1,13 +1,11 @@
 import React,{useEffect} from 'react'
 import {useDispatch, useSelector} from "react-redux";
 import {getClothes} from "../../Redux/Slices/clothesSlice";
-import {Grid, Typography, CircularProgress, Box, LinearProgress} from '@mui/material'
+import {Grid, Typography,  Box, LinearProgress} from '@mui/material'
 import CategoryCard from '../../Components/CategoryButton'
 import Product from '../../Components/ProductCard'
 import {Link} from "react-router-dom";
 export default ()=>{
-
-
     const dispatch = useDispatch()
     const products = useSelector(state=> state.clothes.clothes)
     const isLoading = useSelector(state=> state.clothes.loading)
@@ -17,7 +15,7 @@ export default ()=>{
 
     return(
         <div>
-            <Typography variant={'h5'} style={{padding:'20px'}}>flash sale</Typography>
+            <Typography variant={'h5'} style={{padding:'20px'}}>Flash Sale</Typography>
             <Grid container spacing={2} style={{padding:'20px'}}>
                 {isLoading?(
 

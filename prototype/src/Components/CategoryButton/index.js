@@ -4,7 +4,7 @@ import {CardActionArea, Typography} from '@mui/material';
 
 
 //reusable card component for display categories
-export default function({mens}) {
+export default ({mens})=> {
     return (
         <Card style={{borderRadius:'20px'}} >
             <CardActionArea style={{height:'300px', backgroundColor:mens?"#2BD9AF":"#FF5E84", textAlign:'center'}}>

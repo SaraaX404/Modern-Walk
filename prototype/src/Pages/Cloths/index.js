@@ -1,11 +1,9 @@
 import React,{useEffect} from 'react'
 import {useDispatch, useSelector} from "react-redux";
 import {getClothes} from "../../Redux/Slices/clothesSlice";
-import {Box, CircularProgress, Grid, LinearProgress, Typography} from '@mui/material'
+import {Box,  Grid, LinearProgress, Typography} from '@mui/material'
 import Product from '../../Components/ProductCard'
 export default ({mens})=>{
-
-
     const dispatch = useDispatch()
     const products = useSelector(state=> state.clothes.clothes)
     const isLoading = useSelector(state=> state.clothes.loading)

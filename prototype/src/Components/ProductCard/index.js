@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
+
+
 const useStyles = makeStyles(() => ({
     card: {
         maxWidth: 300,
@@ -15,7 +17,9 @@ const useStyles = makeStyles(() => ({
     },
     title: {
         height: 95,
-        margin:'10px'
+        margin:'10px',
+        fontFamily: 'roboto',
+        fontWeight: 'bold'
     },
     media: {
         display: 'block',
@@ -34,15 +38,19 @@ const useStyles = makeStyles(() => ({
     price: {
         fontSize: '1.5rem',
         fontWeight: 'bold',
+        color:'#0E42FD'
     },
     description: {
         margin: 0,
         marginTop: 20,
         borderRadius: 30,
+        color:"#0E0E0E",
+        fontFamily: 'roboto',
     },
 }));
 //reusable component for display cloths
 export default function ProductCard(props) {
+
     const classes = useStyles();
 
     const { title, price, description, image, category } = props;
@@ -54,7 +62,7 @@ export default function ProductCard(props) {
                     {title}
                 </Typography>
                 <CardMedia component="img" className={classes.media} image={image} alt={title} />
-                <CardContent className={classes.content} style={{backgroundColor: category=="women's clothing"?"#FF5E84":"#2BD9AF"}}>
+                <CardContent className={classes.content} style={{backgroundColor: category==="women's clothing"?"#FF5E84":"#2BD9AF"}}>
                     <Typography variant="h6" className={classes.price}>
                         {price}
                     </Typography>
@@ -63,7 +71,7 @@ export default function ProductCard(props) {
                         color="text.secondary"
                         className={classes.description}
                     >
-                        {description.length > 60 ? `${description.slice(0, 60)}...` : description}
+                        {description.length > 65 ? `${description.slice(0, 65)}...` : description}
                     </Typography>
                 </CardContent>
             </CardActionArea>
